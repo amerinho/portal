@@ -63,11 +63,11 @@ export const useAppContext = () => React.useContext(AppContext);
 // get the page title
 const getPageTitle = (pathname: string) => {
 	const slug = pathname?.split("/").pop();
-	const step = PAGES.find(step => step.route === slug)?.label;
+	const step = PAGE_TITLES_PER_ROUTE.find(step => step.route === slug)?.label;
 	return step ? `${step} | STTL - Fáilte Ireland Trade Portal` : "STTL - Fáilte Ireland Trade Portal";
 };
 
-const PAGES = [
+const PAGE_TITLES_PER_ROUTE = [
 	{ label: "Short Term Tourist Letting", route: "choose" },
 	{ label: "Choose the best account for you", route: "sttl-info" }
 ];
